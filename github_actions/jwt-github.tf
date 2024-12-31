@@ -15,6 +15,7 @@ resource "vault_jwt_auth_backend_role" "global_github_actions" {
   token_policies    = ["default", vault_policy.global_github_actions.name]
   user_claim        = "actor"
   token_ttl         = 600
+  bound_audiences   = ["https://github.com/${var.github_org}"]
   bound_claims_type = "glob"
   bound_claims = {
     repository = "${var.github_org}/*"
@@ -31,6 +32,7 @@ resource "vault_jwt_auth_backend_role" "single_repo_github_actions" {
   token_policies    = ["default", vault_policy.single_repo_github_actions[each.value].name]
   user_claim        = "actor"
   token_ttl         = 600
+  bound_audiences   = ["https://github.com/${var.github_org}"]
   bound_claims_type = "glob"
   bound_claims = {
     repository = "${var.github_org}/${each.value}"
