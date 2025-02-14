@@ -1,11 +1,5 @@
-#----------------------------------------------------------
-# Enable default approle mount
-#----------------------------------------------------------
-
-# Enable approle mount at cesi unit path.
-# Can enable at a custom path by defining "path" parameter
-resource "vault_auth_backend" "approle" {
-  type = "approle"
+# Namespaces are provisioned with a default approle at path approle
+data "vault_auth_backend" "approle" {
   path = "approle"
 }
 
@@ -17,7 +11,7 @@ resource "vault_policy" "approle_policy" {
 
 # Create backend role with permissions assigned to approle
 resource "vault_approle_auth_backend_role" "backend_role" {
-  backend        = vault_auth_backend.approle.path
+  backend        = data.vault_auth_backend.approle.path
   role_name      = "approle-test"
   token_policies = ["default", vault_policy.approle_policy.name]
 }

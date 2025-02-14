@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 env:
-  VAULT_ADDRESS: "https://hcp-vault-private-vault-fc507e0d.5d5b1f21.z1.hashicorp.cloud:8200"
+  VAULT_ADDRESS: "INSERT_VAULT_ADDR"
   NAMESPACE: "admin/secm"
   ORG_NAME: ${{ github.repository_owner }}
   REPO_NAME: ${{ github.event.repository.name }}

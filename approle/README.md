@@ -26,7 +26,7 @@ This terraform will create the following resources
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | Namespace of the CESI unit within vault | `string` | n/a | yes |
-| <a name="input_vault_address"></a> [vault\_address](#input\_\_address) | The URL address of vault instance. Can be either for the public or private address  | `string` | https://hcp-vault-private-vault-fc507e0d.5d5b1f21.z1.hashicorp.cloud:8200 | no |
+| <a name="input_vault_address"></a> [vault\_address](#input\_\_address) | The URL address of vault instance. Can be either for the public or private address  | `string` | n/a | no |
 
 ## Results
 
