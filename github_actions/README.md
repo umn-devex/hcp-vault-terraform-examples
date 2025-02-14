@@ -14,7 +14,7 @@ If you would like to re-use the same variables without inputting them at every t
 namespace     = "admin/CESI"
 github_org    = "umn-CESI"
 repository    = ["hcp-vault-terraform-examples", "repo_2"]
-vault_address = "https://hcp-vault-private-vault-fc507e0d.5d5b1f21.z1.hashicorp.cloud:8200"
+vault_address = "INSERT_VAULT_ADDRESS"
 ```
 
 ## GitHub Actions Sample Workflow
