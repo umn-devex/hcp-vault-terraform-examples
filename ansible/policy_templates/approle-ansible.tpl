@@ -7,3 +7,8 @@ path "secret/data/ansible/*" {
 path "secret/ansible/*" {
   capabilities = ["read"]
 }
+
+# Path for AAP (Ansible Tower) machine credential
+path "secret/data/aap/<CESI>-svc" {
+  capabilities = ["read"]
+}
