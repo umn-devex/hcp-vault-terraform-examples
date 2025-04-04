@@ -1,13 +1,15 @@
-# Inject sample secrets into vault for this demo to illustrte the proper pathing. DO NOT use this method in production.
+# Inject sample secrets into vault for this demo to illustrate the proper pathing. 
+# DO NOT use this method to store real secrets as those should not be plaintext in code (or likely in terraform state either).
 
-resource "vault_generic_secret" "ansible" {
-  path                = "secret/ansible/test"
+resource "vault_kv_secret_v2" "ansible" {
+  mount               = "secret"
+  name                = "ansible/test"
   delete_all_versions = true
-  data_json           = <<EOT
-{
-  "foo":   "bar",
-  "pizza": "ansible_cheese",
-  "lookup_toppings": "ansible_sauce"
+  data_json = jsonencode(
+    {
+      zip = "zap",
+      foo = "bar"
+    }
+  )
 }
-EOT
-}
+
