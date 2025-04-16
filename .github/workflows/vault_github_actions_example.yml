@@ -5,8 +5,8 @@ on:
   workflow_dispatch:
 
 env:
-  VAULT_ADDRESS: "INSERT_VAULT_ADDR"
-  NAMESPACE: "admin/secm"
+  VAULT_ADDRESS: "<VAULT ADDRESS>"
+  NAMESPACE: "admin/<CESI>"
   ORG_NAME: ${{ github.repository_owner }}
   REPO_NAME: ${{ github.event.repository.name }}
 
