@@ -13,6 +13,6 @@ resource "vault_policy" "approle_policy" {
 resource "vault_approle_auth_backend_role" "backend_role" {
   backend        = data.vault_auth_backend.approle.path
   role_name      = "approle-test"
-  secret_id_ttl = "3600s"
+  secret_id_ttl = "365d"
   token_policies = ["default", vault_policy.approle_policy.name]
 }
