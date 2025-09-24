@@ -6,7 +6,7 @@ Please view the different examples below.
 
 ## Setup
 
-1. If you would like to use your own permissions in vault and have the vault CLI installed, the easiest way to get started is to run the following command which will generate a 1 hour token. You can also use the `VAULT_TOKEN`, `VAULT_ADDR`, & `VAULT_NAMESPACE` environmental variables instead. See the [vault terraform provider documentation](https://registry.terraform.io/providers/hashicorp/vault/latest/docs#provider-arguments) for more options. See [this article](https://docs.secm.oit.umn.edu/Accessing%20Vault/cli/#cli-login) for the UMN vault address.
+1. If you would like to use your own permissions in vault and have the vault CLI installed, the easiest way to get started is to run the following command which will generate a 1 hour token. You can also use the `VAULT_TOKEN`, `VAULT_ADDR`, & `VAULT_NAMESPACE` environmental variables instead. See the [vault terraform provider documentation](https://registry.terraform.io/providers/hashicorp/vault/latest/docs#provider-arguments) for more options. See [this article](https://vault-docs.devex.oit.umn.edu/Accessing%20Vault/cli/#cli-login) for the UMN vault address.
 
     ```
     vault login --method=saml --namespace=admin
